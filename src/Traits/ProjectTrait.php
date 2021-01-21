@@ -10,9 +10,9 @@ trait ProjectTrait {
      *
      * @return  stdClass
      */
-    public function projects()
+    public function projects($workspaceId)
     {
-        return $this->sendGetMessage( 'https://www.toggl.com/api/v8/projects' );
+        return $this->sendGetMessage( 'https://www.toggl.com/api/v8/workspaces/'.$workspaceId.'/projects' );
     }
 
     /**
